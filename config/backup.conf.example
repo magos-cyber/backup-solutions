@@ -1,0 +1,28 @@
+# Backup Configuration Example
+# Copy to backup.conf and fill in values
+
+# Proxmox
+PROXMOX_STORAGE="local"
+PROXMOX_MODE="snapshot"
+
+# Docker
+DOCKER_COMPOSE_DIR="/opt/docker"
+DOCKER_BACKUP_DIR="/backups/docker"
+
+# Database
+DB_TYPE="postgres"
+DB_NAME="all"
+DB_ROTATE_DAYS=7
+
+# Files
+BACKUP_SOURCE="/data"
+BACKUP_DEST="/backups/files"
+BACKUP_KEEP_DAYS=30
+
+# Cloud
+CLOUD_REMOTE="gdrive:backups"
+ENCRYPT_RECIPIENT="backup@homelab.local"
+
+# Notifications
+NOTIFY_EMAIL="admin@homelab.local"
+NOTIFY_WEBHOOK=""
